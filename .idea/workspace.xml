@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fc92602-0d03-4cde-aef1-af2f8729694a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.lib/algs4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.lib/checkstyle-cos126.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.lib/checkstyle-lift.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.lib/checkstyle-suppressions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.lib/introcs.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.lib/spotbugs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.lib/stdlib.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/union/Percolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/union/Percolation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,11 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/daniel/IdeaProjects/algos-course/.lib/stdlib.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RunManager">
