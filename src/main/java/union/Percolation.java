@@ -20,18 +20,21 @@ public class Percolation {
 
         for (int i = 0; i < n; i++) {
             int topSquareId = getSquareId(0, i);
-            int bottomSquareId = getSquareId(n - 1, i);
             union.union(topSquareId, n * n);
-            union.union(bottomSquareId, n * n + 1);
         }
     }
 
     // opens the site (row, col) if it is not open already
     public void open(int row, int col) {
         validateIndices(row, col);
-        openSites++;
-        openSquares[--row][--col] = true;
-        unionNeighboringOpenSquares(row, col);
+        if (!isOpen(row, col)) {
+            openSites++;
+            openSquares[--row][--col] = true;
+            if (row == n - 1) {
+                union.union(getSquareId(row, col), n * n + 1);
+            }
+            unionNeighboringOpenSquares(row, col);
+        }
     }
 
     // is the site (row, col) open?
