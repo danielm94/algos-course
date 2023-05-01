@@ -3,9 +3,10 @@ package union;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
-    private static final byte[] ROW_OFFSETS = new byte[]{-1, -1, -1, 0, 0, 1, 1, 1};
-    private static final byte[] COL_OFFSETS = new byte[]{-1, 0, 1, -1, 1, -1, 0, 1};
+    private static final byte[] ROW_OFFSETS = new byte[]{-1, 0, 0, 1};
+    private static final byte[] COL_OFFSETS = new byte[]{0, -1, 1, 0};
     private final WeightedQuickUnionUF union;
+    private final WeightedQuickUnionUF unionWithoutBottom;
     private final int n;
     private final boolean[][] openSquares;
 
@@ -17,10 +18,12 @@ public class Percolation {
         this.n = n;
         this.openSquares = new boolean[n][n];
         this.union = new WeightedQuickUnionUF(n * n + 2);
+        this.unionWithoutBottom = new WeightedQuickUnionUF(n * n + 1);
 
         for (int i = 0; i < n; i++) {
             int topSquareId = getSquareId(0, i);
             union.union(topSquareId, n * n);
+            unionWithoutBottom.union(topSquareId, n * n);
         }
     }
 
@@ -34,6 +37,7 @@ public class Percolation {
                 union.union(getSquareId(row, col), n * n + 1);
             }
             unionNeighboringOpenSquares(row, col);
+            unionNeighboringOpenSquaresNoBottom(row, col);
         }
     }
 
@@ -48,8 +52,8 @@ public class Percolation {
         validateIndices(row, col);
         if (!isOpen(row, col)) return false;
         int targetSquareId = getSquareId(row - 1, col - 1);
-        int targetParent = union.find(targetSquareId);
-        int virtualTopParent = union.find(n * n);
+        int targetParent = unionWithoutBottom.find(targetSquareId);
+        int virtualTopParent = unionWithoutBottom.find(n * n);
         return targetParent == virtualTopParent;
     }
 
@@ -88,6 +92,19 @@ public class Percolation {
                     int squareId = getSquareId(row, col);
                     int neighborSquareId = getSquareId(neighborRow, neighborCol);
                     union.union(squareId, neighborSquareId);
+                }
+            }
+        }
+    }
+    private void unionNeighboringOpenSquaresNoBottom(int row, int col) {
+        for (int i = 0; i < ROW_OFFSETS.length; i++) {
+            int neighborRow = row + ROW_OFFSETS[i];
+            int neighborCol = col + COL_OFFSETS[i];
+            if (neighborRow >= 0 && neighborRow < n && neighborCol >= 0 && neighborCol < n) {
+                if (openSquares[neighborRow][neighborCol]) {
+                    int squareId = getSquareId(row, col);
+                    int neighborSquareId = getSquareId(neighborRow, neighborCol);
+                    unionWithoutBottom.union(squareId, neighborSquareId); // Use unionNoBottom instead of union
                 }
             }
         }
