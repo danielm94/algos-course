@@ -3,15 +3,13 @@ package union;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
-    private static final int[] ROW_OFFSETS = new int[]{-1, -1, -1, 0, 0, 1, 1, 1};
-    private static final int[] COL_OFFSETS = new int[]{-1, 0, 1, -1, 1, -1, 0, 1};
+    private static final byte[] ROW_OFFSETS = new byte[]{-1, -1, -1, 0, 0, 1, 1, 1};
+    private static final byte[] COL_OFFSETS = new byte[]{-1, 0, 1, -1, 1, -1, 0, 1};
     private final WeightedQuickUnionUF union;
     private final int n;
     private final boolean[][] openSquares;
 
     private int openSites = 0;
-
-    private boolean percolationAchieved = false;
 
     // creates n-by-n openSquares, with all sites initially blocked
     public Percolation(int n) {
@@ -59,11 +57,9 @@ public class Percolation {
 
     // does the system percolate?
     public boolean percolates() {
-        if (percolationAchieved) return true;
         int virtualTopParent = union.find(n * n);
         int virtualBottomParent = union.find(n * n + 1);
-        percolationAchieved = virtualTopParent == virtualBottomParent;
-        return percolationAchieved;
+        return virtualTopParent == virtualBottomParent;
     }
 
     // Helper method to convert 2D coordinates to 1D index
