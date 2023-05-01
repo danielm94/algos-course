@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fc92602-0d03-4cde-aef1-af2f8729694a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.lib/algs4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.lib/checkstyle-cos126.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.lib/checkstyle-lift.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.lib/checkstyle-suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.lib/introcs.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.lib/spotbugs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.lib/stdlib.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/union/Percolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/union/Percolation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/union/PercolationStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/union/PercolationStats.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +18,13 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,13 +40,41 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/daniel/IdeaProjects/algos-course/.lib/stdlib.jar",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "C:/Users/Daniel/IdeaProjects/AlgorithmsCourse/.lib/stdlib.jar",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.PercolationStats">
+    <configuration name="Percolation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="union.Percolation" />
+      <module name="AlgorithmsCourse.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="union.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PercolationStats" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="union.PercolationStats" />
+      <module name="AlgorithmsCourse.main" />
+      <option name="PROGRAM_PARAMETERS" value="100 100" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="union.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="AlgorithmsCourse" />
       <option name="filePath" value="$PROJECT_DIR$/build.gradle.kts" />
@@ -54,6 +84,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PercolationStats" />
+        <item itemvalue="Application.Percolation" />
         <item itemvalue="Kotlin script (Beta).build.gradle.kts" />
       </list>
     </recent_temporary>
@@ -67,6 +99,18 @@
       <option name="presentableId" value="Default" />
       <updated>1682909087325</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1682909159292</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682909159292</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
