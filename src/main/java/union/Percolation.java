@@ -3,8 +3,8 @@ package union;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
-    private static final int[] ROW_OFFSETS = new int[] { -1, -1, -1, 0, 0, 1, 1, 1 };
-    private static final int[] COL_OFFSETS = new int[] { -1, 0, 1, -1, 1, -1, 0, 1 };
+    private static final int[] ROW_OFFSETS = new int[]{-1, -1, -1, 0, 0, 1, 1, 1};
+    private static final int[] COL_OFFSETS = new int[]{-1, 0, 1, -1, 1, -1, 0, 1};
     private final WeightedQuickUnionUF union;
     private final int n;
     private final boolean[][] openSquares;
@@ -45,6 +45,7 @@ public class Percolation {
     // is the site (row, col) full?
     public boolean isFull(int row, int col) {
         validateIndices(row, col);
+        if (!isOpen(row, col)) return false;
         int targetSquareId = getSquareId(row - 1, col - 1);
         int targetParent = union.find(targetSquareId);
         int virtualTopParent = union.find(n * n);
