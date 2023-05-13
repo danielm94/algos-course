@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fc92602-0d03-4cde-aef1-af2f8729694a" name="Changes" comment="Add StdStats methods, add constant for confidence, removed unused field." />
+    <list default="true" id="7fc92602-0d03-4cde-aef1-af2f8729694a" name="Changes" comment="Add other stuff">
+      <change afterPath="$PROJECT_DIR$/src/main/java/queues/Deque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/queues/RandomizedQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -35,21 +40,34 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Daniel/IdeaProjects/AlgorithmsCourse/.lib/stdlib.jar",
-    "project.structure.last.edited": "Libraries",
+    "jdk.selected.JAVA_MODULE": "corretto-1.8",
+    "last_directory_selection": "/home/daniel/IdeaProjects/algos-course/src/test/java",
+    "last_opened_file_path": "/home/daniel/IdeaProjects/AlgorithmsCourse",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.PercolationStats">
-    <configuration name="Percolation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="union.Percolation" />
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="timecomplexity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Deque">
+    <configuration name="BitonicArrayChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="timecomplexity.BitonicArrayChecker" />
       <module name="AlgorithmsCourse.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="union.*" />
+          <option name="PATTERN" value="timecomplexity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -57,13 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PercolationStats" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="union.PercolationStats" />
+    <configuration name="Deque" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="queues.Deque" />
       <module name="AlgorithmsCourse.main" />
-      <option name="PROGRAM_PARAMETERS" value="100 100" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="union.*" />
+          <option name="PATTERN" value="queues.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -71,18 +88,74 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="AlgorithmsCourse" />
-      <option name="filePath" value="$PROJECT_DIR$/build.gradle.kts" />
+    <configuration name="StackOfStrings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stacks.StackOfStrings" />
+      <module name="AlgorithmsCourse.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stacks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="BitonicArrayCheckerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;timecomplexity.BitonicArrayCheckerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="BitonicArrayCheckerTest.checkIncreasingOnlyArray" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;timecomplexity.BitonicArrayCheckerTest.checkIncreasingOnlyArray&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PercolationStats" />
-        <item itemvalue="Application.Percolation" />
-        <item itemvalue="Kotlin script (Beta).build.gradle.kts" />
+        <item itemvalue="Application.Deque" />
+        <item itemvalue="Application.StackOfStrings" />
+        <item itemvalue="Application.BitonicArrayChecker" />
+        <item itemvalue="Gradle.BitonicArrayCheckerTest" />
+        <item itemvalue="Gradle.BitonicArrayCheckerTest.checkIncreasingOnlyArray" />
       </list>
     </recent_temporary>
   </component>
@@ -133,5 +206,31 @@
     <MESSAGE value="Add StdStats methods, add constant for confidence." />
     <MESSAGE value="Add StdStats methods, add constant for confidence, removed unused field." />
     <option name="LAST_COMMIT_MESSAGE" value="Add StdStats methods, add constant for confidence, removed unused field." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/timecomplexity/BitonicArrayChecker.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/timecomplexity/BitonicArrayChecker.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/queues/Deque.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AlgorithmsCourse$Deque.ic" NAME="Deque Coverage Results" MODIFIED="1684000289117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>queues.*</FILTER>
+    </SUITE>
   </component>
 </project>
