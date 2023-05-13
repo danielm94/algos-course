@@ -1,5 +1,7 @@
 package stacks;
 
+import linkedlists.Node;
+
 public class StackOfStrings {
     private Node head;
     private int size = 0;
@@ -11,8 +13,8 @@ public class StackOfStrings {
     }
 
     public String pop() {
-        String item = head.item;
-        head = head.next;
+        String item = head.getItem();
+        head = head.getNext();
         size--;
         return item;
     }
@@ -28,10 +30,10 @@ public class StackOfStrings {
     public boolean contains(String item){
         Node curr = head;
         while(curr != null){
-            if(curr.item.equals(item)){
+            if(curr.getItem().equals(item)){
                 return true;
             }
-            curr = curr.next;
+            curr = curr.getNext();
         }
         return false;
     }
@@ -47,19 +49,5 @@ public class StackOfStrings {
         System.out.println(s.pop());
         System.out.println(s.pop());
         System.out.println(s.contains("World"));
-    }
-    private class Node{
-        String item;
-        Node next;
-
-        public Node() {
-            this.item = null;
-            this.next = null;
-        }
-
-        public Node(String item, Node next) {
-            this.item = item;
-            this.next = next;
-        }
     }
 }
