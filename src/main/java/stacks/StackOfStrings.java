@@ -3,12 +3,12 @@ package stacks;
 import linkedlists.Node;
 
 public class StackOfStrings {
-    private Node head;
+    private Node<String> head;
     private int size = 0;
 
     public void push(String item) {
-        Node oldHead = head;
-        head = new Node(item,oldHead);
+        Node<String> oldHead = head;
+        head = new Node<>(item,oldHead);
         size++;
     }
 
@@ -28,7 +28,7 @@ public class StackOfStrings {
     }
 
     public boolean contains(String item){
-        Node curr = head;
+        Node<String> curr = head;
         while(curr != null){
             if(curr.getItem().equals(item)){
                 return true;
