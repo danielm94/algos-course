@@ -4,11 +4,11 @@ import linkedlists.Node;
 
 public class QueueOfStrings {
     int size = 0;
-    Node head;
-    Node tail;
+    Node<String> head;
+    Node<String> tail;
 
     public void enqueue(String item) {
-        Node node = new Node(item, null);
+        Node<String> node = new Node<>(item, null);
         if (isEmpty()) {
             head = node;
             tail = head;
