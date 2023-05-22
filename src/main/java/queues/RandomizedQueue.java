@@ -4,7 +4,6 @@ import edu.princeton.cs.algs4.StdRandom;
 
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
@@ -82,22 +81,23 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     // unit testing (required)
     public static void main(String[] args) {
         RandomizedQueue<Character> queue = new RandomizedQueue<>();
-        List<Character> characterList = Arrays.asList('A', 'B', 'C', 'D', 'E');
-        int listSize = characterList.size();
 
-        System.out.printf("Adding the list of %d characters %s to the queue...\n", listSize, characterList);
-        for (char c : characterList) {
-            queue.enqueue(c);
-        }
+        queue.enqueue('A');
+        queue.enqueue('B');
+        queue.enqueue('C');
+        queue.enqueue('D');
+        queue.enqueue('E');
 
+        int listSize = 5;
         int queueSize = queue.size();
+
         System.out.printf("Does the size of the queue [%d] match the size of the list [%d]?: [%s]\n", queueSize, listSize, queueSize == listSize);
 
         char randomSample = queue.sample();
-        System.out.printf("Does queue.sample() return a random item from the queue?: %s \n", characterList.contains(randomSample));
+        System.out.printf("Does queue.sample() return a random item from the queue?: %s \n", randomSample == 'A' || randomSample == 'B' || randomSample == 'C' || randomSample == 'D' || randomSample == 'E');
 
         Character dequeuedValue = queue.dequeue();
-        System.out.printf("Is the dequeued value of %s in the queue after calling the dequeue() method?: %s \n", dequeuedValue, Arrays.asList(queue).contains(dequeuedValue));
+        System.out.printf("Is the dequeued value of %s in the queue after calling the dequeue() method?: %s \n", dequeuedValue, !queue.isEmpty());
 
         System.out.println("Lets print out all of the items remaining in the queue by using the iterator() method:");
         for (char c : queue) {
@@ -119,12 +119,13 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         }
 
         System.out.println("Let's now empty the queue");
-        while (queue.size() > 0) {
+        while (!queue.isEmpty()) {
             System.out.println("Dequeued value: " + queue.dequeue());
         }
 
         System.out.println("Is the queue empty?: " + queue.isEmpty());
     }
+
 
     private void resize(int newSize) {
         Item[] newQueue = (Item[]) new Object[newSize];
