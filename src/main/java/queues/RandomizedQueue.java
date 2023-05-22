@@ -2,6 +2,7 @@ package queues;
 
 import edu.princeton.cs.algs4.StdRandom;
 
+
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -55,27 +56,10 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
     // return an independent iterator over items in random order
     public Iterator<Item> iterator() {
-        Item[] arrayCopy = Arrays.copyOfRange(queue, 0, tail);
+        Item[] arrayCopy = (Item[]) new Object[tail];
+        System.arraycopy(queue, 0, arrayCopy, 0, tail);
         StdRandom.shuffle(arrayCopy);
-        return new Iterator<Item>() {
-            int i = 0;
-
-            @Override
-            public boolean hasNext() {
-                return i < arrayCopy.length;
-            }
-
-            @Override
-            public Item next() {
-                if (!hasNext()) throw new NoSuchElementException("Cannot get next item as there are no more items.");
-                return arrayCopy[i++];
-            }
-
-            @Override
-            public void remove() {
-                throw new UnsupportedOperationException("Cannot remove items from RandomizedQueue iterator.");
-            }
-        };
+        return new RandomizedQueueIterator<>(arrayCopy);
     }
 
     // unit testing (required)
@@ -126,12 +110,34 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         System.out.println("Is the queue empty?: " + queue.isEmpty());
     }
 
+    private static class RandomizedQueueIterator<Item> implements Iterator<Item> {
+        private final Item[] shuffledArray;
+        private int i = 0;
+
+        private RandomizedQueueIterator(Item[] shuffledArray) {
+            this.shuffledArray = shuffledArray;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return i < shuffledArray.length;
+        }
+
+        @Override
+        public Item next() {
+            if (!hasNext()) throw new NoSuchElementException("Cannot get next item as there are no more items.");
+            return shuffledArray[i++];
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException("Cannot remove items from RandomizedQueue iterator.");
+        }
+    }
 
     private void resize(int newSize) {
         Item[] newQueue = (Item[]) new Object[newSize];
-        for (int i = 0; i < tail; i++) {
-            newQueue[i] = queue[i];
-        }
+        if (tail >= 0) System.arraycopy(queue, 0, newQueue, 0, tail);
         queue = newQueue;
     }
 }
